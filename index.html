@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Action Collaboration System</title>
+	<link rel="stylesheet" href="cssFileFormating.css">   
+	 <link rel="stylesheet" href="HomeP.css">
+	<script src="HomeP.js" defer></script>
+</head>
+
+<body>
+    <header class="header-tab">
+        <nav class="nav-bar">
+            <a href="HomePage.html" class="nav-link active">Home</a>
+            <a href="Historypage.html" class="nav-link">History</a>
+			<a href="#" class="nav-link login" onclick="showLoginPopup()">Log In</a>
+			
+	<div id="loginPopup" class="login-popup">
+        <div class="login-popup-content">
+        <button class="close-button" onclick="hideLoginPopup()">&times;</button>
+        <h2>Log In</h2>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <p id="emailError" style="display: none;">Invalid email format.</p>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <p id="passwordError" style="display: none;">Password must be longer than 6 characters.</p>
+            
+            <button class="login-button" type="submit">Log In</button>
+        </form>
+    </div>
+</div>
+
+	</nav>
+</header>
+
+    <div class="bg"></div>
+
+    <div class="websitestyle">
+        <div class="headingformat">
+            <div class="movingMarquee">
+    <div class="textformat">
+        <div class="marquee">
+            <b>Our mission is to create a platform that fosters collaboration, inspires innovation, and empowers individuals and organizations to take meaningful steps toward a more sustainable future.</b>
+        </div>
+    </div>
+</div>
+<br>
+
+            <h1>Climate Action Collaboration System</h1>
+            <h2>Our Journey Towards Sustainable Collaboration</h2><br><br><br>
+            <p>Welcome to a platform born out of a shared vision for a sustainable future. The Climate Action Collaboration System was conceived in 2023 by a group of passionate individuals determined to make a meaningful impact in the fight against climate change...</p><br><br><br><br><br>
+
+            <h2>Search for projects</h2><br><br>
+			<div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search projects...">
+                <button id="searchButton" onclick="displayLoginMessage()">Search</button>
+                <button id="refreshButton" onclick="refreshResults()">Clear</button>
+            </div>
+            <div class="results-container" id="resultsContainer"></div>
+
+        <footer>
+            <div class="content">
+                <div class="right box">
+                    <div class="lower">
+                        <div class="topic">Contact us</div>
+                        <div class="email">
+                            <h1>contact-us@gmail.com</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
