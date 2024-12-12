@@ -1,0 +1,374 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Section */
+.header-tab {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #004d40, #00796b);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.nav-link.login:hover {
+    background-color: #add8e6; /* Darker orange on hover */
+    transform: scale(1.1);
+	color: black;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Background Section */
+.bg {
+    background: url('background-image.jpg') no-repeat center center/cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Main Content Section */
+.websitestyle {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.headingformat h1, h2 {
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+.headingformat p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Search Bar Section */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#searchInput {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #004d40;
+    border-radius: 25px;
+    outline: none;
+}
+
+#searchButton, #refreshButton {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: #00796b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#searchButton:hover, #refreshButton:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background: linear-gradient(90deg, #004d40, #00796b);
+    padding: 20px 0;
+    color: white;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 4px solid #00796b;
+}
+
+footer .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .topic {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer .email h1 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+	color: white;
+}
+/* Marquee Effect */
+.movingMarquee {
+    overflow: hidden; /* Hides text when it's out of view */
+    white-space: nowrap; /* Prevents text wrapping */
+    position: relative;
+    height: 40px; /* Adjust height to fit your text */
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    animation: scroll-left 20s linear infinite; /* Slower scrolling */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Starts off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Ends off-screen to the left */
+    }
+}
+/* Results Container Styling */
+.results-container {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Result Styling */
+.project-result {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    border-left: 5px solid #00796b;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-result:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-category {
+    background: #004d40;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* Highlighted Text Styling */
+.highlight {
+    background-color: #ffeb3b;
+    font-weight: bold;
+    padding: 0 2px;
+}
+
+/* Info and Loading Messages */
+.info-message, .loading-message {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin-bottom: 15px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .nav-link.login {
+        width: auto; /* Adjust width for the Log In button */
+    }
+}
+/* Login Popup Styles */
+.login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for better focus */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-popup-content {
+    background: linear-gradient(to bottom right, #ffffff, #e0f7fa); /* Subtle gradient for modern look */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Strong shadow for depth */
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out; /* Smooth appearance animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #00796b;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #004d40; /* Darker green on hover */
+}
+
+h2 {
+    font-size: 24px;
+    color: #004d40; /* Matching theme color */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #00796b;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 8px rgba(0, 121, 107, 0.5); /* Soft glow effect */
+}
+
+/* Login Button Specific Styling */
+button.login-button {
+    width: 100%;
+    background-color: #00796b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect only for login button */
+button.login-button:hover {
+    background-color: #004d40;
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Active state only for login button */
+button.login-button:active {
+    transform: translateY(1px); /* Button press effect */
+}
+
+/* Other buttons (non-login) styling */
+button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+button:active {
+    transform: none;
+}
+
+
+#emailError,
+#passwordError {
+    color: #d32f2f; /* Red for error messages */
+    font-size: 14px;
+    margin: -10px 0 10px;
+    text-align: left;
+}

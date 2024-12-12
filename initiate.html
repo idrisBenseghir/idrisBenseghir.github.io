@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Climate Action Collaboration System</title>
+    <link rel="stylesheet" href="cssFileFormating.css">
+    <link rel="stylesheet" href="inititae.css">
+    <script src="inititae.js" defer></script>
+</head>
+<body>
+    <header class="header-tab">
+        <nav class="nav-bar">
+            <a href="Home.html" class="nav-link">Home</a>
+            <a href="History.html" class="nav-link">History</a>
+            <a href="initiate.html" class="nav-link active">Initiate</a>
+        </nav>
+    </header>
+
+    <div class="bg"></div>
+
+    <div class="websitestyle">
+        <div class="headingformat">
+            <h1>Project Initiation</h1>
+            <!-- Progress Tracker -->
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <form id="projectForm">
+                <label for="projectTitle">Project Title:</label>
+                <input type="text" id="projectTitle" name="projectTitle" required oninput="updateProgress()"><br>
+
+                <div class="textarea-container">
+                    <label for="projectDescription">Project Description:</label>
+                    <textarea id="projectDescription" name="projectDescription" required oninput="updateProgress()"></textarea>
+                </div>
+
+                <div class="textarea-container">
+                    <label for="projectObjective">Project Objective:</label>
+                    <textarea id="projectObjective" name="projectObjective" required oninput="updateProgress()"></textarea>
+                </div>
+
+                <label for="projectType">Project Type:</label>
+                <select id="projectType" name="projectType" required onchange="updateProgress()">
+                    <option value="renewableEnergy">Renewable Energy</option>
+                    <option value="environment">Environment</option>
+                    <option value="sustainableEnergy">Sustainable Energy</option>
+                    <option value="waterManagement">Water Management</option>
+                    <option value="reforestation">Reforestation</option>
+                    <option value="climateEducation">Climate Education</option>
+                    <option value="foodManagement">Food Management</option>
+                    <option value="transportation">Transportation</option>
+                </select><br>
+
+                <label for="projectLocation">Project Location:</label>
+                <select id="projectLocation" name="projectLocation" required onchange="updateProgress()">
+                    <option value="abuDhabi">Abu Dhabi</option>
+                    <option value="dubai">Dubai</option>
+                    <option value="sharjah">Sharjah</option>
+                </select><br>
+
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required onchange="updateProgress()"><br>
+
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required onchange="updateProgress()"><br>
+
+                <button type="button" id="initiateProjectBtn" onclick="initiateProject()">Initiate Project</button>
+                <button type="button" id="clearFormBtn" onclick="clearForm()">Clear</button>
+            </form>
+
+            <div id="thankYouMessage" style="display:none; color: green; margin-top: 20px;">
+                Thank you for initiating the project!
+            </div>
+        </div>
+    </div>
+
+    <div class="ft">
+        <footer>
+            <div class="content">
+                <div class="right box">
+                    <div class="lower">
+                        <div class="topic">Contact us</div>
+                        <div class="email">
+                            <h1>contact-us@gmail.com</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
