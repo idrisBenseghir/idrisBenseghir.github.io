@@ -67,6 +67,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     // If validation passes, redirect to home.html
     if (isValid) {
-        window.location.href = "home.html";
+        window.location.href = "Home.html";
     }
 });
